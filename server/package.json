@@ -8,6 +8,8 @@
     "body-parser": "*"
   },
   "scripts": {
+    "docker-dev:build": "docker build -f Dockerfile.dev -t server .",
+    "docker-dev:run": "docker run -p 5000:5000 -v /app/node_modules -v $(pwd):/app server",
     "dev": "nodemon index.js",
     "start": "node index.js"
   }

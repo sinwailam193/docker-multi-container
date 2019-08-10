@@ -4,6 +4,8 @@
     "redis": "2.8.0"
   },
   "scripts": {
+    "docker-dev:build": "docker build -f Dockerfile.dev -t worker .",
+    "docker-dev:run": "docker run -v /app/node_modules -v $(pwd):/app worker",
     "start": "node index.js",
     "dev": "nodemon index.js"
   }

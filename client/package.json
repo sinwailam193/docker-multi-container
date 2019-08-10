@@ -10,6 +10,8 @@
     "axios": "0.18.0"
   },
   "scripts": {
+    "docker-dev:build": "docker build -f Dockerfile.dev -t client .",
+    "docker-dev:run": "docker run -p 3000:3000 -v /app/node_modules -v $(pwd):/app client",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
